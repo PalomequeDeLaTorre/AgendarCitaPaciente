@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio Dossier Médical</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .form-row label {
+            margin-right: 10px;
+            white-space: nowrap;
+        }
+
+        select {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #21e5ff;
+        }
+
+        .img-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Directorio Dossier Médical</h1>
+        <h2>Reserva tu cita con los mejores médicos y especialistas</h2>
+        <form action="/buscar-especialista" method="GET">
+            <div class="form-row">
+                <label for="tipoConsulta">Tipo de consulta:</label>
+                <select name="tipoConsulta" id="tipoConsulta">
+                    <option value="Consulta Física">Consulta Física</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="especialidad">Especialidad médica:</label>
+                <select name="especialidad" id="especialidad">
+                    <option value="Pediatría">Pediatría</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="ciudad">Ciudad:</label>
+                <select name="ciudad" id="ciudad">
+                    <option value="San juan del rio">San juan del rio</option>
+                </select>
+            </div>
+            <button type="submit">Buscar Especialista</button>
+        </form>
+        <div class="img-container">
+            <img src="https://images.theconversation.com/files/527214/original/file-20230519-15-32xlpt.jpg?ixlib=rb-1.1.0&rect=440%2C132%2C6831%2C4495&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip" alt="Imagen">
+        </div>
+    </div>
+</body>
+</html>
